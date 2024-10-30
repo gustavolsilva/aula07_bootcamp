@@ -5,8 +5,8 @@
 Imagine uma situação de projeto: <br>
 Você precisa fazer uma ETL (Extract, Transformation, Load).
 Existem três módulos:
-> Excel.py
-> API.py
+> Excel.py <br>
+> API.py <br>
 > SQL.py
 
 Dentro de cada um deles, tem seus respectivos códigos com a parte de Extração (Extract), Transformação (Transformation) e Carga (Load). Inicialmente a carga acontecia em Postgres, tornou-se Duckdb. 
@@ -18,3 +18,22 @@ A função ajudará neste termo, pois ao invés de fazer um código de load para
 
 Função é sinônimo de eficiência e maturidade de software.
 
+## Instrução para execução do Projeto:
+
+Execute o ```gerador_de_dados.py```
+```
+python gerador_de_dados.py
+```
+Informe o número de linhas para a geração do arquivo de vendas.csv
+
+Após, execute o arquivo ```main.py```
+
+```
+python main.py
+```
+
+## Instrução para execução dos exercicios de Função
+Execute o arqauivo ```pipeline_exercicios.py```
+```
+python pipeline_exercicios.py
+```
