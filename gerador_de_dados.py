@@ -1,6 +1,7 @@
 import csv
 import random
 import datetime
+import os
 
 num_linhas: int = int(input("Digite o número de linhas que deseja gerar: ")) 
 inicio = datetime.datetime.now()
@@ -45,5 +46,13 @@ def generate_fake_data(num_records, file_path):
 
 # Exemplo de uso
 generate_fake_data(num_records=num_linhas, file_path='/home/gustavo/Projects/Python/aula07_bootcamp/vendas.csv')
+fim = datetime.datetime.now()
+print(f"{fim} - {num_linhas} linhas geradas em {fim - inicio} segundos.")
+file_path = '/home/gustavo/Projects/Python/aula07_bootcamp/vendas.csv'
+
+if not os.path.exists(file_path):
+    open(file_path, 'w').close()
+
+generate_fake_data(num_records=num_linhas, file_path=file_path)
 fim = datetime.datetime.now()
 print(f"{fim} - {num_linhas} linhas geradas em {fim - inicio} segundos.")
